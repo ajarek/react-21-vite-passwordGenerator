@@ -1,0 +1,20 @@
+:root {
+  --green:#7bed9f;
+  --dark:#2f3542;
+  --light-dark:#57606f;
+  --light:#ffffff;
+  --gray:#a4b0be;
+  --gold:#eccc68;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
