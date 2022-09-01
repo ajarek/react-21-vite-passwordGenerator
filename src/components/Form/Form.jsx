@@ -4,19 +4,22 @@ import { Input } from "../Input/Input"
 import { Label } from "../Label/Label"
 export const Form = (props) => {
   const {
-    step,
+    value,
     className,
     addNewPassword,
     newTaskText,
     onChange,
+    onChangeCheck,
+    password,
+    onSubmit,
     ...otherProps
   } = props
   return (
     <div className="container">
       <div className="result">
-        <span>PTx1f5DaFX</span>
+        <span>{password}</span>
         <button>
-          <i class="fas fa-copy"></i>
+          <i className="fas fa-copy"></i>
         </button>
       </div>
       <form
@@ -27,14 +30,15 @@ export const Form = (props) => {
         <div className="row-range">
           <div className="row-label">
             <Label>Character Length</Label>
-            <span>10</span>
+            <span>{value}</span>
           </div>
           <Input
             type="range"
             min="0"
             max="20"
             step="1"
-            value={step}
+            defaultValue={value}
+            onChange={onChange}
           />
         </div>
         <div className="row">
@@ -42,7 +46,7 @@ export const Form = (props) => {
             className={"input"}
             type={"checkbox"}
             value={newTaskText}
-            onChange={onChange}
+            onChange={onChangeCheck}
             id="character"
           />
           <Label htmlFor="character">Include Uppercase Letters</Label>
@@ -52,7 +56,7 @@ export const Form = (props) => {
             className={"input"}
             type={"checkbox"}
             value={newTaskText}
-            onChange={onChange}
+            onChange={onChangeCheck}
             id="character"
           />
           <Label htmlFor="character">Include Lowercase Letters</Label>
@@ -62,7 +66,7 @@ export const Form = (props) => {
             className={"input"}
             type={"checkbox"}
             value={newTaskText}
-            onChange={onChange}
+            onChange={onChangeCheck}
             id="character"
           />
           <Label htmlFor="character">Include Numbers</Label>
@@ -72,7 +76,7 @@ export const Form = (props) => {
             className={"input"}
             type={"checkbox"}
             value={newTaskText}
-            onChange={onChange}
+            onChange={onChangeCheck}
             id="character"
           />
           <Label htmlFor="character">Include Symbols</Label>
@@ -87,7 +91,12 @@ export const Form = (props) => {
             <div>⬜</div>
           </div>
         </div>
-        <Button className={"btn-submit"}>GENERATE →</Button>
+        <Button
+          className={"btn-submit"}
+          onClick={onSubmit}
+        >
+          GENERATE →
+        </Button>
       </form>
     </div>
   )

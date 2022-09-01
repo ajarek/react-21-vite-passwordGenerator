@@ -39,12 +39,17 @@
 }
 .row-range {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-evenly;
+  height: 60px;
 }
 .row-label{
+  height: 30px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .row-label span{
     font-size: 1.5rem;

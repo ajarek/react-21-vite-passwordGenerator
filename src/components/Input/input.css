@@ -6,7 +6,6 @@
     width: 25px;
     height: 25px;
     border-radius: 0.15em;
-    /* transform: translateY(-0.075em); */
     display: grid;
     place-content: center;
     margin-right: 1rem;
@@ -31,6 +30,8 @@
   height: 6px;
   border: 1px solid #7bed9f;
   background-color: transparent; 
+  margin-top: 0.5rem;
+  
   }
   input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
