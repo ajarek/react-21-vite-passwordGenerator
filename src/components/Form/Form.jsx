@@ -6,25 +6,31 @@ export const Form = (props) => {
   const {
     value,
     className,
-    addNewPassword,
+    onClickCopy,
     newTaskText,
     onChange,
-    onChangeCheck,
+    onChangeUppercase,
+    onChangeLowercase,
+    onChangeNumbers,
+    onChangeSymbols,
     password,
     onSubmit,
+    backgroundProgres1,
+    backgroundProgres2,
+    backgroundProgres3,
+    backgroundProgres4,
     ...otherProps
   } = props
   return (
     <div className="container">
       <div className="result">
         <span>{password}</span>
-        <button>
+        <button onClick={onClickCopy}>
           <i className="fas fa-copy"></i>
         </button>
       </div>
       <form
         className={"form"}
-        onSubmit={addNewPassword}
         {...otherProps}
       >
         <div className="row-range">
@@ -46,8 +52,8 @@ export const Form = (props) => {
             className={"input"}
             type={"checkbox"}
             value={newTaskText}
-            onChange={onChangeCheck}
-            id="character"
+            onChange={onChangeUppercase}
+            id="uppercase"
           />
           <Label htmlFor="character">Include Uppercase Letters</Label>
         </div>
@@ -56,8 +62,8 @@ export const Form = (props) => {
             className={"input"}
             type={"checkbox"}
             value={newTaskText}
-            onChange={onChangeCheck}
-            id="character"
+            onChange={onChangeLowercase}
+            id="lowercase"
           />
           <Label htmlFor="character">Include Lowercase Letters</Label>
         </div>
@@ -66,8 +72,8 @@ export const Form = (props) => {
             className={"input"}
             type={"checkbox"}
             value={newTaskText}
-            onChange={onChangeCheck}
-            id="character"
+            onChange={onChangeNumbers}
+            id="numbers"
           />
           <Label htmlFor="character">Include Numbers</Label>
         </div>
@@ -76,8 +82,8 @@ export const Form = (props) => {
             className={"input"}
             type={"checkbox"}
             value={newTaskText}
-            onChange={onChangeCheck}
-            id="character"
+            onChange={onChangeSymbols}
+            id="symbols"
           />
           <Label htmlFor="character">Include Symbols</Label>
         </div>
@@ -85,17 +91,17 @@ export const Form = (props) => {
           <p>strength</p>
           <div className="progres">
             <p>Medium</p>
-            <div>🟨</div>
-            <div>🟨</div>
-            <div>⬜</div>
-            <div>⬜</div>
+            <div className={backgroundProgres1}></div>
+            <div className={backgroundProgres2}></div>
+            <div className={backgroundProgres3}></div>
+            <div className={backgroundProgres4}></div>
           </div>
         </div>
         <Button
           className={"btn-submit"}
           onClick={onSubmit}
         >
-          GENERATE →
+          GENERATE <i class="fas fa-arrow-right"></i>
         </Button>
       </form>
     </div>

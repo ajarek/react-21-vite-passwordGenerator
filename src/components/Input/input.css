@@ -1,51 +1,52 @@
-.input{
-    appearance: none;
-    margin: 0;
-    font: inherit;
-    background-color:#7bed9f ;
-    width: 25px;
-    height: 25px;
-    border-radius: 0.15em;
-    display: grid;
-    place-content: center;
-    margin-right: 1rem;
+.input {
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  background-color: #7bed9f;
+  width: 25px;
+  height: 25px;
+  border-radius: 0.15em;
+  display: grid;
+  place-content: center;
+  margin-right: 1rem;
 }
 .input::before {
-    content: "";
-    width: 15px;
-    height: 15px;
-    transform: scale(0);
-    transition: 120ms transform ease-in-out;
-    background-color: #2f3542;
-    transform-origin: bottom left;
-    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-  }
-  .input:checked::before {
-    transform: scale(1);
-  }
-  input[type='range']{
-    -webkit-appearance: none;
+  content: "";
+  width: 15px;
+  height: 15px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: #2f3542;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+.input:checked::before {
+  transform: scale(1);
+}
+input[type="range"] {
+  -webkit-appearance: none;
   width: 100%;
   border-radius: 8px;
   height: 6px;
   border: 1px solid #7bed9f;
-  background-color: transparent; 
+  background-color: transparent;
   margin-top: 0.5rem;
-  
-  }
-  input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: #7bed9f;
-    border: 1px solid #bdc3c7;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  input[type='range']::-webkit-slider-runnable-track{
-    
-      background: linear-gradient(to right, var(--progress-color) 0%, var(--progress-color) var(--progress-percent), var(--track-color) var(--progress-percent), var(--track-color) 100%);
-    }
-    
-  
-  
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #7bed9f;
+  border: 1px solid #bdc3c7;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    var(--progress-color) 0%,
+    var(--progress-color) var(--progress-percent),
+    var(--track-color) var(--progress-percent),
+    var(--track-color) 100%
+  );
+}

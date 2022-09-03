@@ -1,13 +1,13 @@
-import './label.css'
-export const Label =(props)=>{
-    const{children, className, ...otherProps}=props
-    return (
+import "./label.css"
+export const Label = (props) => {
+  const { children, className, ...otherProps } = props
+  return (
     <label
-    className={className}
-    {...otherProps}
+      className={className}
+      {...otherProps}
     >
-       { children}
+      {children}
     </label>
-    )
+  )
 }
 export default Label
